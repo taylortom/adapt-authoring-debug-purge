@@ -2,84 +2,15 @@
 @import 'sharedStyles';
 
 body.module-debug {
-  .debug .view > .logs {
-    background-color: @tertiary-color;
-    .panel {
-      position: fixed;
-      right: 0;
-      margin: 20px 30px;
-      width: 250px;
-      .nav {
-        margin-bottom: 15px;
-        text-align: right;
-        button {
-          width: 40px;
-          background-color: @secondary-color;
-          color: white;
-        }
-      }
-      > .filter {
-        display: none;
-        padding: 20px;
-        background: @tertiary-color;
-        border-radius: 3px;
-        color: white;
-        > div {
-          margin-bottom: 15px;
-          &:last-child {
-            margin-bottom: 0;
-          }
-  
-          & > h2 {
-            font-size: 110%;
-            margin-bottom: 10px;
-          }
-        }
-      }
+  .debug .view > .purge {
+    text-align: center;
+    .image i {
+      margin: 50px;
+      color: @alert-color;
+      font-size: 125px;
     }
-    .log {
-      border: 1px solid black;
-      border-left-width: 10px;
-      &.error { border-color: @alert-color; }
-      &.warn { border-color: @warning-color; }
-      &.success { border-color: @success-color; }
-      &.info { border-color: @info-color; }
-      &.debug { border-color: grey; }
-
-      .header {
-        padding: 5px 10px;
-
-        > div {
-          display: inline-block;
-        }
-
-        .timestamp {
-          width: 180px;
-          color: white;
-        }
-        .level {
-          width: 75px;
-          font-weight: @font-weight-bold;
-          text-transform: uppercase;
-          &.error { color: @alert-color; }
-          &.warn { color: @warning-color; }
-          &.success { color: @success-color; }
-          &.info { color: @info-color; }
-          &.debug { color: grey; }
-        }
-        .module {
-          width: 125px;
-          font-weight: @font-weight-bold;
-          text-transform: uppercase;
-          color: @secondary-color;
-        }
-      }
-      .data {
-        display: block;
-        padding: 10px;
-        white-space: pre;
-        color: white;
-      }
+    p {
+      margin-bottom: 25px;
     }
   }
 }
